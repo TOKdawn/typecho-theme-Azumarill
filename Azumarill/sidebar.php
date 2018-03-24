@@ -1,24 +1,34 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-<div class="sidebar">
-    <a href="<?php $this->options->siteUrl(); ?>"><div class="my clear">
-        <img src="<?php $this->options->themeUrl('/img/avatar.png'); ?>" alt="哞菇">
-        <h1><?php $this->options->title() ?></h1>
-        <h2><?php $this->options->description() ?></h2>
-    </div></a>
-    <div class="nav">
-        <div class="half">
+
+  <div class="sidebar">
+        <div class="z_overlay">
+        </div>
+            
+        <div class="z_basic">
+           
+              <a href="<?php $this->options->siteUrl(); ?>" class="z_portrait">   <img src="<?php $this->options->themeUrl('/img/avatar.png'); ?>" alt="DawninShadow" class="z_userPortait"></a>
+              <a href="<?php $this->options->siteUrl(); ?>">  <h1><?php $this->options->title() ?></h1></a>
+                <h2><?php $this->options->description() ?></h2>
+            <div class="z_nav">
+        
             <?php $this->widget('Widget_Metas_Category_List')->to($category); ?>
             <?php while ($category->next()): ?><a href="<?php $category->permalink(); ?>"><?php $category->name(); ?></a><?php endwhile; ?>
+        
+            </div>
+            <ul class="z_function">
+              
+            <?php if($this->user->hasLogin()): ?>
+				<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('进入后台'); ?> </a></li>
+            <?php else: ?>
+                <li class="last"><a href="<?php $this->options->adminUrl('login.php'); ?>"><?php _e('登录博客'); ?></a></li>
+            <?php endif; ?>
+            <li><a herf="#"> /ヽ(•̀ω•́ )ゝ/</a></li>
+             <li><a herf="#"> 回到主页 </a></li>
+            </ul>
         </div>
-        <a href="http://flag.moe/"><i class="icon-info"></i>关于哞菇</a>
-        <a href="http://lab.flag.moe/"><i class="icon-beaker"></i>实验室</a>
-        <a href="http://flag.moe/#friends"><i class="icon-link"></i>小伙伴们</a>
-        <a href="http://flag.moe/"><i class="icon-box"></i>神社的宝藏</a>
-        <a>
-            <form id="search" method="post" action="./" role="search">
-            <i class="icon-search"></i><input name="s" value="搜索" class="search">
-            </form>
-        </a>
+   
+       
+        
+       
     </div>
-</div>

@@ -20,16 +20,16 @@
     		</p>
             <?php endif; ?>
     		<p class="content">
-                <textarea rows="8" cols="50" name="text" placeholder="说点什么吧 (。・`ω´・)" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
+                <textarea rows="8" cols="50" name="text" placeholder="要传达的和传达不到的是些什么呢(,,•́ . •̀,,)" id="textarea" class="textarea" required ><?php $this->remember('text'); ?></textarea>
             </p>
     		<p>
-                <button type="submit" class="submit"><?php _e('评论  \(•ㅂ•)/'); ?></button>
+                <button type="submit" class="submit"><?php _e('发射  ╰(●’◡’●)╮'); ?></button>
             </p>
     	</form>
 </div>
     </div>
     <?php else: ?>
-    <h3><?php _e('评论已关闭'); ?></h3>
+    <h3><?php _e('不言语也是一种言语'); ?></h3>
     <?php endif; ?>
 </div>
 
