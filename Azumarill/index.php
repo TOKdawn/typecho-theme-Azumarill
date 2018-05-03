@@ -2,10 +2,10 @@
 /**
  * 简单清爽的蓝色风格。
  * 
- * @package Azumarill
+ * @package Azumarill_WS
  * @author 哞菇
  * @version 1.0
- * @link https://github.com/NekoTora/Azumarill
+ * @link https://github.com/TOKdawn/typecho-theme-Azumarill
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

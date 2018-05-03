@@ -1,7 +1,7 @@
 //Ready
 $(document).ready(function() {
     console.log('公主已仙逝');
-    console.log('少年焰仍烧');
+    console.log('少年血仍烧');
     console.log('恶龙今犹在');
     console.log('不见安徒生');
     hSize();
