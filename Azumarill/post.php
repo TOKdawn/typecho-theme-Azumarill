@@ -11,7 +11,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <div class="sub">
                 <span><?php $this->date('Y.m.d'); ?></span> / 
                 <span><?php $this->category(','); ?></span> / 
-                <span>点击 <?php $this->views();?></span> / 
+                <span>点击 <?php Views_Plugin::theViews();?></span> / 
                 <span>回复 <?php $this->commentsNum('%d'); ?></span> / 
                 <span><?php $this->tags(', ', true, ''); ?></span>
             </div>

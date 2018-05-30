@@ -37,7 +37,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <div class="sub">
                 <span><i class="icon-clock-1"></i><?php $this->date('Y.m.d'); ?></span>
                 <span><i class="icon-folder"></i><?php $this->category(','); ?></span>
-                <span><i class="icon-eye-1"></i><?php $this->views();?></span>
+                <span><i class="icon-eye-1"></i><?php Views_Plugin::theViews();?></span>
                 <span><i class="icon-comment"></i><?php $this->commentsNum('%d'); ?></span>
                 <span><i class="icon-tag"></i><?php $this->tags(', ', true, ''); ?></span>
             </div>
