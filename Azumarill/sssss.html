@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="box"> -->
+    <!--   <div class="zpy"></div> -->
+    <!-- </div> -->
+    <div class="orbit"></div>
+</body>
+<style>
+    body {
+        background-color: #a3d5d3;
+        font-family: 'Open Sans';
+    }
+
+    #box {
+        background-color: #88ce02;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        z-index: 1
+    }
+
+    .zpy {
+        background-color: #ffeb3b;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 55px;
+        height: 85px;
+        z-index: 2;
+    }
+
+    .orbit {
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        transform: rotate(360deg) translateX(65px) rotate(-360deg);
+    }
+</style>
+
+</html>

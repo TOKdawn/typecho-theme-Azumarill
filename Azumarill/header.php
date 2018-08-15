@@ -19,7 +19,7 @@
     <script src="<?php $this->options->themeUrl('js/jquery-1.9.1.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/page.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/SmoothScroll.js'); ?>"></script>
-
+   <script src="<?php $this->options->themeUrl('js/TweenMax.min.js'); ?>"></script>
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('css/favicon.ico'); ?>"> 
     <link rel="apple-touch-icon-precomposed" href="<?php $this->options->themeUrl('/img/avatar.png'); ?>">
 

@@ -1,17 +1,50 @@
 //Ready
-$(document).ready(function() {
+$(document).ready(function () {
     console.log('公主已仙逝');
     console.log('少年血仍烧');
     console.log('恶龙今犹在');
     console.log('不见安徒生');
     hSize();
+
+
+
+    var $overlay = $('.z_overlay');
+    var $star = $('.star-1');
+    var $star_2 = $('.star-2');
+    var $star_3 = $('.star-3');
+    TweenMax.to($overlay,
+        7, {
+            css: {
+                backgroundPosition: '100% 50%'
+            },
+            repeat: -1,
+            yoyo: true
+        });
+    TweenMax.from($star, 7, {
+        css: {
+            left: '-100px'
+        },
+        repeat: -1
+    });
+    TweenMax.from($star_2, 10, {
+        css: {
+            left: '-100px'
+        },
+        repeat: -1
+    });
+    TweenMax.from($star_3, 5, {
+        css: {
+            left: '-100px'
+        },
+        repeat: -1
+    });
 });
 //Resize
-$(window).resize(function() {
+$(window).resize(function () {
     hSize();
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
         $('.gotop').css('bottom', '0px');
     } else {
@@ -44,12 +77,13 @@ function menu() {
 }
 
 function gotop() {
-    $("body,html").animate({ scrollTop: 0 }, 1000);
+    $("body,html").animate({
+        scrollTop: 0
+    }, 1000);
 }
 
 
-//Hitokoto
-//setTimeout("getkoto()",1000);
+
 var timer;
 
 function getkoto() {

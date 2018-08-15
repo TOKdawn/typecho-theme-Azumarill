@@ -2,7 +2,6 @@
 
 
   <div class="sidebar">
-      
              <div class="z_overlay">
         <!-- stars -->
         <div class="star star-1"></div>
