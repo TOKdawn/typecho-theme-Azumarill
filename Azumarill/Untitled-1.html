@@ -14,12 +14,36 @@
         height: 180px;
         width: 100%;
         position: absolute;
-        background: -webkit-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        /* background: -webkit-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
         background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-        background-size: 400% 400%;
-
+        background-size: 400% 400%; */
         overflow: hidden;
         box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.05), inset 0 0 0 30px rgba(0, 0, 0, 0.05), inset 0 0 0 45px rgba(0, 0, 0, 0.05), inset 0 0 0 60px rgba(0, 0, 0, 0.05), inset 0 0 0 75px rgba(0, 0, 0, 0.05), inset 0 0 0 90px rgba(0, 0, 0, 0.05);
+    }
+
+    .zzz {
+        background: -webkit-linear-gradient(135deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        width: 400%;
+        height: 400%;
+        position: absolute;
+        transform: translate(0, -20%);
+        /* 0 --70 */
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    .font {
+        overflow: hidden;
+        box-shadow: inset 0 0 0 15px rgba(0, 0, 0, 0.05), inset 0 0 0 30px rgba(0, 0, 0, 0.05), inset 0 0 0 45px rgba(0, 0, 0, 0.05), inset 0 0 0 60px rgba(0, 0, 0, 0.05), inset 0 0 0 75px rgba(0, 0, 0, 0.05), inset 0 0 0 90px rgba(0,
+        0, 0, 0.05);
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .planet {
@@ -379,16 +403,18 @@
 
     .star-1 {
         top: 50px;
+
+
     }
 
     .star-2 {
         top: 100px;
-        left: calc(100% + 100px);
+
     }
 
     .star-3 {
         top: 130px;
-        left: calc(100% + 100px);
+
     }
 </style>
 
@@ -397,80 +423,81 @@
 
     <div class="z_overlay">
         <!-- stars -->
-        <div class="star star-1"></div>
-        <div class="star star-2"></div>
-        <div class="star star-3"></div>
-        <!-- clouds -->
-        <div class="cloud-group-1">
-            <div class="cloud cloud-1"></div>
-            <div class="cloud cloud-2"></div>
-            <div class="cloud cloud-3"></div>
-            <div class="cloud cloud-4"></div>
-            <div class="cloud cloud-5"></div>
-            <div class="cloud cloud-6"></div>
+        <div class='font'>
+
+
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+
+            <div class="cloud-group-1">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="cloud cloud-3"></div>
+                <div class="cloud cloud-4"></div>
+                <div class="cloud cloud-5"></div>
+                <div class="cloud cloud-6"></div>
+            </div>
+            <div class="cloud-group-2">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="cloud cloud-3"></div>
+                <div class="cloud cloud-4"></div>
+                <div class="cloud cloud-5"></div>
+                <div class="cloud cloud-6"></div>
+            </div>
+            <div class="cloud-group-3">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="cloud cloud-3"></div>
+                <div class="cloud cloud-4"></div>
+                <div class="cloud cloud-5"></div>
+                <div class="cloud cloud-6"></div>
+            </div>
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <div class="orbit orbit-4"></div>
+            <div class="ring-before"></div>
+            <div class="ring-bigger-before"></div>
+            <div class="planet"></div>
+            <div class="ring-after"></div>
+            <div class="ring-bigger-after"></div>
+            <div class="sub-planet"></div>
         </div>
-        <div class="cloud-group-2">
-            <div class="cloud cloud-1"></div>
-            <div class="cloud cloud-2"></div>
-            <div class="cloud cloud-3"></div>
-            <div class="cloud cloud-4"></div>
-            <div class="cloud cloud-5"></div>
-            <div class="cloud cloud-6"></div>
+        <div class="zzz">
         </div>
-        <div class="cloud-group-3">
-            <div class="cloud cloud-1"></div>
-            <div class="cloud cloud-2"></div>
-            <div class="cloud cloud-3"></div>
-            <div class="cloud cloud-4"></div>
-            <div class="cloud cloud-5"></div>
-            <div class="cloud cloud-6"></div>
-        </div>
-        <!-- orbits -->
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
-        <div class="orbit orbit-3"></div>
-        <div class="orbit orbit-4"></div>
-        <div class="orbit orbit-5"></div>
-        <div class="orbit orbit-6"></div>
-        <!-- main planet -->
-        <div class="ring-before"></div>
-        <div class="ring-bigger-before"></div>
-        <div class="planet"></div>
-        <div class="ring-after"></div>
-        <div class="ring-bigger-after"></div>
-        <!-- sub planet -->
-        <div class="sub-planet"></div>
     </div>
 
 
     <script>
-        var $overlay = $('.z_overlay');
+        var $overlay = $('.zzz');
         var $star = $('.star-1');
         var $star_2 = $('.star-2');
         var $star_3 = $('.star-3');
         TweenMax.to($overlay,
-            7, {
+            8, {
                 css: {
-                    backgroundPosition: '100% 50%'
+                    x: -900
                 },
                 repeat: -1,
                 yoyo: true
             });
         TweenMax.from($star, 7, {
             css: {
-                left: '-100px'
+                x: -420
             },
             repeat: -1
         });
         TweenMax.from($star_2, 10, {
             css: {
-                left: '-100px'
+                x: -420
             },
             repeat: -1
         });
         TweenMax.from($star_3, 5, {
             css: {
-                left: '-100px'
+                x: -420
             },
             repeat: -1
         });

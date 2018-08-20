@@ -7,38 +7,39 @@ $(document).ready(function () {
     hSize();
 
 
-
-    var $overlay = $('.z_overlay');
+    var $overlay = $('.zzz');
     var $star = $('.star-1');
     var $star_2 = $('.star-2');
     var $star_3 = $('.star-3');
+
     TweenMax.to($overlay,
-        7, {
+        8, {
             css: {
-                backgroundPosition: '100% 50%'
+                x: -900
             },
             repeat: -1,
             yoyo: true
         });
     TweenMax.from($star, 7, {
         css: {
-            left: '-100px'
+            x: -420
         },
         repeat: -1
     });
     TweenMax.from($star_2, 10, {
         css: {
-            left: '-100px'
+            x: -420
         },
         repeat: -1
     });
     TweenMax.from($star_3, 5, {
         css: {
-            left: '-100px'
+            x: -420
         },
         repeat: -1
     });
-});
+
+})
 //Resize
 $(window).resize(function () {
     hSize();
@@ -80,20 +81,4 @@ function gotop() {
     $("body,html").animate({
         scrollTop: 0
     }, 1000);
-}
-
-
-
-var timer;
-
-function getkoto() {
-    var loader = document.createElement('script');
-    loader.setAttribute('src', 'http://api.hitokoto.us/rand?encode=jsc&fun=echokoto');
-    document.getElementById("loadbox").appendChild(loader);
-    timer = setTimeout("getkoto()", 5000);
-}
-
-function echokoto(result) {
-    var hc = eval(result);
-    document.getElementById("hitokoto").innerHTML = hc.hitokoto;
 }
