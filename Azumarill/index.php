@@ -3,8 +3,8 @@
  * 简单清爽的蓝色风格。
  * 
  * @package Azumarill_WS
- * @author 哞菇
- * @version 1.0
+ * @author 哞菇 & TOKdawn
+ * @version 2.1
  * @link https://github.com/TOKdawn/typecho-theme-Azumarill
  */
 
