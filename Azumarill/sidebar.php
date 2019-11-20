@@ -2,55 +2,49 @@
 
 
   <div class="sidebar">
-   
-       
-         <div class="z_overlay">
-        <!-- stars -->
-        <div class='font'>
-
-
-            <div class="star star-1"></div>
-            <div class="star star-2"></div>
-            <div class="star star-3"></div>
-
-            <div class="cloud-group-1">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-                <div class="cloud cloud-5"></div>
-                <div class="cloud cloud-6"></div>
+        <div class="z_overlay">
+            <!-- stars -->
+            <div class='font'>
+                <div class="star star-1"></div>
+                <div class="star star-2"></div>
+                <div class="star star-3"></div>
+                <div class="cloud-group-1">
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="cloud cloud-3"></div>
+                    <div class="cloud cloud-4"></div>
+                    <div class="cloud cloud-5"></div>
+                    <div class="cloud cloud-6"></div>
+                </div>
+                <div class="cloud-group-2">
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="cloud cloud-3"></div>
+                    <div class="cloud cloud-4"></div>
+                    <div class="cloud cloud-5"></div>
+                    <div class="cloud cloud-6"></div>
+                </div>
+                <div class="cloud-group-3">
+                    <div class="cloud cloud-1"></div>
+                    <div class="cloud cloud-2"></div>
+                    <div class="cloud cloud-3"></div>
+                    <div class="cloud cloud-4"></div>
+                    <div class="cloud cloud-5"></div>
+                    <div class="cloud cloud-6"></div>
+                </div>
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="orbit orbit-4"></div>
+                <div class="ring-before"></div>
+                <div class="ring-bigger-before"></div>
+                <div class="planet"></div>
+                <div class="ring-after"></div>
+                <div class="ring-bigger-after"></div>
+                <div class="sub-planet"></div>
             </div>
-            <div class="cloud-group-2">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-                <div class="cloud cloud-5"></div>
-                <div class="cloud cloud-6"></div>
-            </div>
-            <div class="cloud-group-3">
-                <div class="cloud cloud-1"></div>
-                <div class="cloud cloud-2"></div>
-                <div class="cloud cloud-3"></div>
-                <div class="cloud cloud-4"></div>
-                <div class="cloud cloud-5"></div>
-                <div class="cloud cloud-6"></div>
-            </div>
-            <div class="orbit orbit-1"></div>
-            <div class="orbit orbit-2"></div>
-            <div class="orbit orbit-3"></div>
-            <div class="orbit orbit-4"></div>
-            <div class="ring-before"></div>
-            <div class="ring-bigger-before"></div>
-            <div class="planet"></div>
-            <div class="ring-after"></div>
-            <div class="ring-bigger-after"></div>
-            <div class="sub-planet"></div>
+            <div class="zzz"></div>
         </div>
-        <div class="zzz">
-        </div>
-    </div>
         <div class="z_basic">
            
               <a href="<?php $this->options->siteUrl(); ?>" class="z_portrait">   <img src="<?php $this->options->themeUrl('/img/avatar.png'); ?>" alt="DawninShadow" class="z_userPortait"></a>
@@ -82,9 +76,15 @@
                 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="icon" width="18px" height="18.00px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M544.949 561.422s0-71.387-34.779-75.050c-34.779-3.663-142.775 0-142.775 0v-219.654h161.078s-1.83-73.219-32.949-73.219h-261.755l43.93-117.148s-65.897 3.663-89.692 45.761-98.844 252.604-98.844 252.604 25.627 10.983 67.726-20.134c42.101-31.116 56.743-86.033 56.743-86.033l76.879-3.663 1.83 223.316s-133.621-1.83-161.078 0c-27.457 1.83-42.101 75.050-42.101 75.050h203.182s-18.307 124.47-69.557 214.164c-53.085 89.692-151.929 161.078-151.929 161.078s71.387 29.287 140.947-10.983c69.557-42.101 120.811-223.316 120.811-223.316l162.912 203.182s14.643-97.013-1.83-124.47c-18.307-27.457-113.49-137.283-113.49-137.283l-42.101 36.607 29.287-120.811h177.552zM587.050 188.010l-1.83 660.793h65.897l23.795 82.37 115.321-82.37h162.912v-660.793h-366.091zM879.92 775.584h-76.879l-97.013 75.050-21.965-75.050h-20.134v-512.527h215.991v512.527z"  /></svg> </a>
                 </a>
             </div>
+            
         </div>
-   
-       
-        
-       
+        <section class="widget">
+        <h3 class="widget-title"><?php _e('标签云'); ?></h3>  
+        <?php $this->widget('Widget_Metas_Tag_Cloud', 'ignoreZeroCount=1&limit=30&sort=count&desc=1')->to($tags); ?>
+        <?php if($tags->have()): ?>     
+            <?php while ($tags->next()): ?>   
+                <a style="color:rgb(<?php echo(rand(0,255)); ?>,<?php echo(rand(0,255)); ?>,<?php echo(rand(0,255)); ?>);font-size:<?php echo(rand(12,22));?>px;" href="<?php $tags->permalink();?>" title="<?php $tags->count(); ?> 个话题"><?php $tags->name(); ?></a>
+            <?php endwhile; ?> 
+        <?php endif; ?>
+        </section>
     </div>

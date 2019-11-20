@@ -16,6 +16,11 @@ function themeConfig($form) {
     $form->addInput($sidebarBlock->multiMode());
 }
 
+function themeInit($archive) {
+    if ($archive->is('index')) {
+        $archive->parameter->pageSize = 10; // 自定义条数
+    }
+}
 
 /*
 function themeFields($layout) {

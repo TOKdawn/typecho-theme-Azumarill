@@ -3,8 +3,11 @@
 一款扁平设计的简单蓝色Typecho主题。  
 A typecho theme with flat designs and azure colour.  
   
-Designed by 哞菇   魔改 by TOKdawn
-2015-08           2018-04
+Designed by 哞菇  
+2015-08           
+
+魔改 by TOKdawn
+2018-04
 
 
 
@@ -40,6 +43,3 @@ Azumarill是口袋妖怪中的精灵。<del>（起名字好麻烦啊，这种事
   
 ![image](https://github.com/TOKdawn/typecho-theme-Azumarill/blob/master/preview/index.png)
   
-![image](https://github.com/TOKdawn/typecho-theme-Azumarill/blob/master/preview/post.png)
-  
-![image](https://github.com/TOKdawn/typecho-theme-Azumarill/blob/master/preview/mobile.png)
